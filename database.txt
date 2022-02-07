@@ -1,0 +1,85 @@
+1. 회원가입 table생성문
+
+create table members (
+  idx int not null auto_increment PRIMARY KEY ,
+  u_id varchar(20) not null default '',
+  pwd varchar(16) not null default '',
+  u_name varchar(30) not null default '',
+  birth varchar(10) not null default '',
+  birth_cal_type char(1) not null default '1',
+  email varchar(100) not null default '',
+  postalCode char(5) not null default '',
+  addr1 varchar(255) not null default '',
+  addr2 varchar(255) not null default '',
+  mobile varchar(13) not null default '',
+  reg_date date not null default now();
+);
+
+CREATE TABLE `yebang97`.`member` ( `idx` INT NOT NULL AUTO_INCREMENT , `u_id` VARCHAR(20) NOT NULL , `pwd` VARCHAR(16) NOT NULL , `u_name` VARCHAR(30) NOT NULL , `birth` VARCHAR(10) NOT NULL , `birth_cal_type` CHAR(1) NOT NULL DEFAULT '1' , `email` VARCHAR(100) NOT NULL , `postalCode` CHAR(5) NOT NULL , `addr1` VARCHAR(255) NOT NULL , `addr2` VARCHAR(255) NOT NULL , `mobile` VARCHAR(13) NOT NULL , `reg_date` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`idx`)) ENGINE = MyISAM;
+
+CREATE TABLE `yebang97`.`member` ( `idx` INT NOT NULL AUTO_INCREMENT , `u_id` VARCHAR(20) NOT NULL , `pwd` VARCHAR(16) NOT NULL , `u_name` VARCHAR(30) NOT NULL , `birth` VARCHAR(10) NOT NULL , `birth_cal_type` CHAR(1) NOT NULL DEFAULT '1' , `email` VARCHAR(100) NOT NULL , `postalCode` CHAR(5) NOT NULL , `addr1` VARCHAR(255) NOT NULL , `addr2` VARCHAR(255) NOT NULL , `mobile` VARCHAR(13) NOT NULL , `reg_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`idx`)) ENGINE = MyISAM;
+
+2. 어드민 계정 생성하기
+insert into member(u_name, u_id, pwd, birth, birth_cal_type, postalCode, addr1, addr2, email, mobile) values('관리자', 'admin', 'aaa111!!!', '1997-07-05', '1', '30114', '세종특별자치시 도움5로 19(어진동)', '우정사업본부', 'admin@admin.com', '010-1111-2222');
+
+3. 공지사항
+CREATE TABLE boards (
+idx INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+subject VARCHAR( 100 ) NOT NULL,
+content TEXT NOT NULL,
+office VARCHAR( 20 ) NOT NULL,
+regDate VARCHAR( 10 ) NOT NULL default now(),
+hit INT NOT NULL default 0,
+img_fullPath VARCHAR( 255 ),
+up_filename VARCHAR( 100 ),
+file_size VARCHAR( 100 ) 
+);
+
+3-1. 내용 입력
+insert into boards (subject,content, office) value ('제목1', '내용1', '서울');
+insert into boards (subject,content, office) value 
+('제목3', '내용3', '서울'),('제목4', '내용4', '서울'),('제목5', '내용5', '서울'),('제목6', '내용6', '서울');
+insert into boards (subject,content, office) value ('제목4', '내용4', '서울');
+insert into boards (subject,content, office) value ('제목5', '내용5', '서울');
+insert into boards (subject,content, office) value ('제목6', '내용6', '서울');
+insert into boards (subject,content, office) value ('제목6', '내용6', '서울');
+insert into boards (subject,content, office) value ('제목6', '내용6', '서울');
+insert into boards (subject,content, office) value ('제목6', '내용6', '서울');
+insert into boards (subject,content, office) value ('제목7', '내용7', '서울');
+insert into boards (subject,content, office) value ('제목8', '내용8', '서울');
+insert into boards (subject,content, office) value ('제목9', '내용9', '서울');
+insert into boards (subject,content, office) value ('제목10', '내용10', '서울');
+insert into boards (subject,content, office) value ('제목11', '내용11', '서울');
+insert into boards (subject,content, office) value ('제목12', '내용12', '서울');
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');
+
+
+이전글 다음글
+SELECT * FROM boards WHERE idx = 6
+UNION ALL (
+SELECT * FROM boards WHERE idx < 6 ORDER BY idx DESC LIMIT 1)
+UNION ALL (
+SELECT * FROM boards WHERE idx > 6  ORDER BY idx ASC LIMIT 1);
+
+
+
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');insert into boards (subject,content, office) value ('제목13', '내용13', '용인');insert into boards (subject,content, office) value ('제목18', '내용18', '경기도');insert into boards (subject,content, office) value ('제목13', '내용13', '충청도');insert into boards (subject,content, office) value ('제목13', 
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');insert into boards (subject,content, office) value ('제목13', '내용13', '용인');insert into boards (subject,content, office) value ('제목13', '123213', '경기도');insert into boards (subject,content, office) value ('제목13', '내용13', '충청도');insert into boards (subject,content, office) value ('제목13', 
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');insert into boards (subject,content, office) value ('제목ㄴㅇㄹㄴㅇ13', '내용13', '용인');insert into boards (subject,content, office) value ('제목13', 'ㅎㄹㅎㄹㅎ', '경기도');insert into boards (subject,content, office) value ('제목13', '내용13', '전라도');
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');insert into boards (subject,content, office) value ('제목13', '내용13', '용인');insert into boards (subject,content, office) value ('제목18', '내용18', '경기도');insert into boards (subject,content, office) value ('제목13', '내용13', '충청도');insert into boards (subject,content, office) value ('제목13', 
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');insert into boards (subject,content, office) value ('제목13', '내용13', '용인');insert into boards (subject,content, office) value ('제목13', '123213', '경기도');insert into boards (subject,content, office) value ('제목13', '내용13', '충청도');insert into boards (subject,content, office) value ('제목13', 
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');insert into boards (subject,content, office) value ('제목ㄴㅇㄹㄴㅇ13', '내용13', '용인');insert into boards (subject,content, office) value ('제목13', 'ㅎㄹㅎㄹㅎ', '경기도');insert into boards (subject,content, office) value ('제목13', '내용13', '전라도');
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');insert into boards (subject,content, office) value ('제목13', '내용13', '용인');insert into boards (subject,content, office) value ('제목18', '내용18', '경기도');insert into boards (subject,content, office) value ('제목13', '내용13', '충청도');insert into boards (subject,content, office) value ('제목13', 
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');insert into boards (subject,content, office) value ('제목13', '내용13', '용인');insert into boards (subject,content, office) value ('제목13', '123213', '경기도');insert into boards (subject,content, office) value ('제목13', '내용13', '충청도');insert into boards (subject,content, office) value ('제목13', 
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');insert into boards (subject,content, office) value ('제목ㄴㅇㄹㄴㅇ13', '내용13', '용인');insert into boards (subject,content, office) value ('제목13', 'ㅎㄹㅎㄹㅎ', '경기도');insert into boards (subject,content, office) value ('제목13', '내용13', '전라도');
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');insert into boards (subject,content, office) value ('제목13', '내용13', '용인');insert into boards (subject,content, office) value ('제목18', '내용18', '경기도');insert into boards (subject,content, office) value ('제목13', '내용13', '충청도');insert into boards (subject,content, office) value ('제목13', 
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');insert into boards (subject,content, office) value ('제목13', '내용13', '용인');insert into boards (subject,content, office) value ('제목13', '123213', '경기도');insert into boards (subject,content, office) value ('제목13', '내용13', '충청도');insert into boards (subject,content, office) value ('제목13', 
+insert into boards (subject,content, office) value ('제목13', '내용13', '서울');insert into boards (subject,content, office) value ('제목ㄴㅇㄹㄴㅇ13', '내용13', '용인');insert into boards (subject,content, office) value ('제목13', 'ㅎㄹㅎㄹㅎ', '경기도');insert into boards (subject,content, office) value ('제목13', '내용13', '전라도');
+
+  <?php
+  echo '<script>
+        document.getElementById("page'.$page.'").style.color = "aqua";
+      </script>';
+  ?>
+
+            <a href="notice.php?page=<?php echo $now_block != 1? ($now_block*5)+1 : $e_pageNum+1; ?>" title="다음 목록"><i class="fas fa-angle-double-right"></i></a>

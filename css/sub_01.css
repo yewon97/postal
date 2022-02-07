@@ -1,0 +1,147 @@
+/* aside img */
+.aside_top_img {
+  border-bottom: 1px solid #e5e5e5;
+  width: 250px;
+  height: 190px;
+  background: url(../images/aside01.png) 0 0 no-repeat;
+  position: relative;
+}
+/* aside img */
+/* common에서 다른것 */
+.lnb_aside_list li:nth-of-type(2) {
+  background: #f5f5f5 url(../images/checking.gif) 210px center no-repeat;
+}
+/* common에서 다른것 */
+
+.cont_container h3 {
+  font-size: 30px; color: #454851; text-align: center;
+  width: 100%; height: 45px; margin-bottom: 30px; margin-top: 10px;
+  line-height: 45px;
+}
+
+.introduce {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* 지역 선택 */
+.postal_search_wrap {
+  width: 910x; height: 230px;
+  border-radius: 5px;
+  margin: 0 auto; padding: 10px 20px;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+.postal_search_wrap a {
+  display: block;
+  width: 250px; height: 50px;
+  line-height: 50px;
+  background: #fff;
+  border: 1px solid #ced4da; border-radius: 5px;
+  font-size: 18px; color: #454851; text-align: center;
+  box-shadow: 2px 2px 0 rgba(136, 136, 136, 0.377);
+  box-sizing: border-box;
+}
+.postal_search_wrap a:active {
+  box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+  position: relative; top:2px; 
+  background-color: #f7afb9;
+}
+.postal_search_wrap ul {
+  width: 860px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+}
+.postal_search_wrap ul li { margin-bottom: 10px;}
+
+/* search_box */
+.search_wrap {
+  text-align: center;
+  margin: 40px 0;
+}
+.search_input_wrap input {
+  width: 350px;
+  height: 30px;
+  padding: 0px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  line-height: 30px;
+  font-family: 'paybooc-Medium';
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+.search_input_wrap input:focus {
+  border: 1px solid #d45246;
+  transition: all 0.3s;
+}
+.search_input_wrap button {
+  background: #d45246;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  font-family: 'paybooc-Medium';
+  line-height: 24px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 0 rgb(136 136 136);
+  cursor: pointer;
+}
+.search_input_wrap button:active {
+  box-shadow: 1px 1px 0 rgb(0, 0, 0, 0.5);
+  position: relative;
+  top: 2px;
+  background-color: #a13329;
+}
+.search_wrap select {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  font-family: 'paybooc-Medium';
+  margin-right: 5px;
+  padding: 0px 10px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  background: url(../images/toggle_arrow.png) no-repeat 95% 50%;
+  background-size: 15%;
+  appearance: none;
+  color: #454851;
+}
+.search_wrap select:focus-visible {
+  outline: 1px solid #d45246;
+}
+/* search_box */
+
+/* table */
+.table{
+  width:910px; margin: 10px auto 30px; 
+  color: #454851; 
+  text-align: center; border-collapse: collapse;
+  border-top: 3px solid #D45246; border-bottom: 2px solid #999;
+}
+.table tbody tr {
+  height: 50px; font-size: 12px;
+  border: 1px solid #ddd; border-left: 0; border-right:0;
+  
+}
+
+.list_number{width:6%;}
+.list_region{width:10%;}
+.list_title{width:15%;}
+.list_address{width:25%;}
+.list_phone{width: 11%;}
+thead {font-size: 16px; font-weight: bold; line-height: 50px;}
+tbody td {vertical-align: middle; line-height: 20px;}
+tbody tr:hover { background-color: #fff7f7; }
+
+.page_list {
+  width: 100%; height: 30px; line-height: 30px;
+  display: flex; justify-content: center; align-items: center;
+}
+.page_prev { float: left; font-size: 18px; color: #D45246;}
+.page_next {font-size: 18px; color: #D45246;}
+
+.page_list .page_num { float: left; font-size: 16px; }
+.page_num li {float: left; margin: 0 10px;}
+/* table */
